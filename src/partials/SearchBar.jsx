@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { IoCloseSharp, IoSearch } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
-import axios from '../utils/AXios'
+import axios from '../utils/Axios'
 import no_img from '../assets/no_img.png'
 
 function SearchBar() {
