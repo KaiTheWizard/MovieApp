@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+*{
+    font-family: poppins;
+}
+
+/* #1A1A1D */
+
+/*  */
+
+::-webkit-scrollbar{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    /* width: 10px;
+    height: 10px; */
+    border-radius: 10%;
+    opacity:20%;
+    background-color: #6A1E55;
+}
+::-webkit-scrollbar-thumb:hover{
+
+    opacity:100%;
+
+}
