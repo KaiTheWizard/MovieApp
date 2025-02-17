@@ -6,9 +6,17 @@ import axios from "../utils/Axios";
 import Cards from "../partials/Cards";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import asyncgettvdata from "../store/actions/TVActions";
 
 
 function TvShow() {
+    const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(asyncgettvdata())
+  },[])
+
+
     const [TvShow, setTvShow] = useState([]);
     const [category, setCategory] = useState("airing_today");
     const [page, setPage] = useState(1);
@@ -63,7 +71,7 @@ function TvShow() {
                     hasMore={hasMore}
                     loader={<h4>Loading...</h4>}
                 >
-                    <Cards data={TvShow} />
+                    <Cards data={TvShow} mediaType='tv' />
                 </InfiniteScroll>
             </div>
         </div>

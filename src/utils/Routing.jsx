@@ -6,18 +6,24 @@ import Popular from '../components/Popular'
 import Movie from '../components/Movie'
 import TvShow from '../components/TvShow'
 import People from '../components/People'
+import MovieDetails from '../components/MovieDetails'
+import PersonDetails from '../components/PersonDetails'
+import TvDetails from '../components/TvDetails'
 
 function Routing() {
   return (
     <div className='h-full w-full '>
         <Link to='/'></Link>
         <Routes>
-            <Route path='/' element={<Home/>}></Route>
-            <Route path='/trending' element={<Trending/>}></Route>
-            <Route path='/popular' element={<Popular/>}></Route>
-            <Route path='/movies' element={<Movie/>}></Route>
-            <Route path='/tvshows' element={<TvShow/>}></Route>
-            <Route path='/celebrities' element={<People/>}></Route>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/trending' element={<Trending/>}/>
+            <Route path='/popular' element={<Popular/>}/>
+            <Route path='/movies' element={<Movie/>}/>
+            <Route path='/movie/details/:id' element={<MovieDetails/>}/>
+            <Route path='/tvshows' element={<TvShow/>}/>
+            <Route path='/tv/details/:id' element={<TvDetails/>}/>
+            <Route path='/celebrities' element={<People/>}/>
+            <Route path='/celebrities/details/:id' element={<PersonDetails/>}/>
         </Routes>
     </div>
   )

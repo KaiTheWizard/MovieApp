@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "../utils/Axios";
 import { Link } from "react-router-dom";
 
-function HorizontalCards({ data }) {
-  console.log(data);
+function HorizontalCards({ data ,category }) {
   return (
     <div className="h-[45vh] gap-5  flex overflow-x-auto w-full">
       {data &&
         data.map((item, index) => {
           return (
-            <div
+            <Link to={`${item.media_type}/details/${item.id}`}
               key={index}
               className=" card h-[40vh] w-[18%] shrink-0 overflow-hidden rounded-sm bg-zinc-800"
             >
@@ -32,7 +31,7 @@ function HorizontalCards({ data }) {
                   <Link>more</Link>
                 </p>
               </div>
-            </div>
+            </Link>
           );
         })}
     </div>
