@@ -5,7 +5,7 @@ import asyncgetmoviedata from "../store/actions/MovieActions";
 
 function MovieDetails() {
   const { id } = useParams();
-  const moviedata = useSelector((state) => state);
+  const moviedata = useSelector((state) => state.moviedata);
   console.log(moviedata)
   const dispatch = useDispatch();
   useEffect(() => {

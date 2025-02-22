@@ -16,6 +16,7 @@ const asyncgetmoviedata = (id) => async (dispatch,getState)=>{
             recommendations : recommendations.data.results,
             similar : similar.data.results,
         }
+        console.log(movieDetails)
         dispatch(getmoviedata(movieDetails))
     } catch (error) {
         console.log(error)
