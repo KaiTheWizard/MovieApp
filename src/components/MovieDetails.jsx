@@ -13,7 +13,7 @@ function MovieDetails() {
   }, [id]);
   return (
     <div
-      className="h-screen w-full "
+      className="h-screen w-full movie"
       style={{
         background: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(https://image.tmdb.org/t/p/original/${
           moviedata.details.backdrop_path || moviedata.details.poster_path
