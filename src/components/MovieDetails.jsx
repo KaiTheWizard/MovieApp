@@ -5,7 +5,7 @@ import asyncgetmoviedata from "../store/actions/MovieActions";
 
 function MovieDetails() {
   const { id } = useParams();
-  const moviedata = useSelector((state) => state);
+  const {moviedata} = useSelector((state) => state.moviedata);
   console.log(moviedata)
   const dispatch = useDispatch();
   useEffect(() => {
@@ -16,7 +16,7 @@ function MovieDetails() {
       className="h-screen w-full "
       style={{
         background: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(https://image.tmdb.org/t/p/original/${
-          MovieDetails.details.backdrop_path || MovieDetails.details.poster_path
+          moviedata.details.backdrop_path || moviedata.details.poster_path
         })`,
         // backgroundRepeat: "no-repeat",
         backgroundPosition: "top-30%",
