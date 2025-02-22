@@ -22,6 +22,7 @@ function MovieDetails() {
         backgroundPosition: "top-30%",
         backgroundSize: "cover",
       }}
+     
     ></div>
   );
 }
