@@ -31,7 +31,7 @@ function SearchBar() {
             {search_data && search_data.map((s,index)=>{
             return (
             
-              <Link className="text-zinc-600 gap-5 hover:text-black hover:bg-zinc-200 border-b-[1px] w-full py-10 flex justify-start px-5 items-center bg-zinc-300 ">
+              <Link  to={`/${s.media_type }/details/${s.id}`} key={index} className="text-zinc-600 gap-5 hover:text-black hover:bg-zinc-200 border-b-[1px] w-full py-10 flex justify-start px-5 items-center bg-zinc-300 ">
                 <img className='h-24 w-24 object-cover rounded-xl ' src={ s.backdrop_path || s.poster_path ?`https://image.tmdb.org/t/p/original/${s.backdrop_path || s.poster_path}`: no_img} alt="" />
                 <span> 
                   { s.original_title || s.title || s.name}

@@ -25,7 +25,7 @@ function Header({ wallpaper }) {
         </p>
         <p className="text-justify w-[50%]">
           {wallpaper.overview.slice(0, 200)}...
-          <Link>more</Link>
+          <Link  to={`/${wallpaper.media_type || mediaType || category }/details/${wallpaper.id}`}>more</Link>
         </p>
       </div>
     </div>
