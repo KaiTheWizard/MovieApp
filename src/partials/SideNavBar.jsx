@@ -34,7 +34,7 @@ function SideNavBar() {
         </Link>
         <Link
           className="capitalize flex gap-2 hover:pl-7 rounded-lg duration-200 delay-100 py-3 hover:opacity-100 opacity-50 text-xl my-1 hover:bg-[#6A1E55]"
-          to="/movies"
+          to="/movie"
         >
           <PiFilmSlateFill />
           movies

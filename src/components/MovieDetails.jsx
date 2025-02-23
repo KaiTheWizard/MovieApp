@@ -1,29 +1,29 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import asyncgetmoviedata from "../store/actions/MovieActions";
+import asyncdata from "../store/actions/MovieActions";
 
 function MovieDetails() {
   const { id } = useParams();
-  const {moviedata} = useSelector((state) => state.moviedata);
-  console.log(moviedata)
   const dispatch = useDispatch();
+  const { moviedata } = useSelector((state) => state.movies);
+  console.log(moviedata);
   useEffect(() => {
-    dispatch(asyncgetmoviedata(id));
+    dispatch(asyncdata(id));
   }, [id]);
-  return (
+  return moviedata ? (
     <div
       className="h-screen w-full movie"
       style={{
-        background: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(https://image.tmdb.org/t/p/original/${
-          moviedata.details.backdrop_path || moviedata.details.poster_path
-        })`,
-        // backgroundRepeat: "no-repeat",
-        backgroundPosition: "top-30%",
+        backgroundImage: `linear-gradient(rgba(0,0,0,.455),rgba(0,0,0,.7),rgba(0,0,0,.9)),url(https://image.tmdb.org/t/p/original/${moviedata.details.backdrop_path})`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
-     
-    ></div>
+    >
+
+    </div>
+  ) : (
+    <h2>Loading...</h2>
   );
 }
 

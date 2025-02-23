@@ -13,12 +13,11 @@ import TvDetails from '../components/TvDetails'
 function Routing() {
   return (
     <div className='h-full w-full '>
-        <Link to='/'></Link>
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/trending' element={<Trending/>}/>
             <Route path='/popular' element={<Popular/>}/>
-            <Route path='/movies' element={<Movie/>}/>
+            <Route path='/movie' element={<Movie/>}/>
             <Route path='/movie/details/:id' element={<MovieDetails/>}/>
             <Route path='/tvshows' element={<TvShow/>}/>
             <Route path='/tv/details/:id' element={<TvDetails/>}/>
