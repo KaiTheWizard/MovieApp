@@ -40,12 +40,12 @@ function Home() {
   return wallpaper && trending ? (
     <div className="h-full w-full flex bg-[#1A1A1D]">
       <SideNavBar />
-      <div className="Main-page w-[80%] h-full  overflow-auto overflow-x-hidden">
+      <div className="Main-page w-[80%] h-full  overflow-y-auto overflow-x-hidden">
         <SearchBar />
         <Header wallpaper={wallpaper} />
         <div className="mainbtm w-[90%] mx-auto">
           <div className="flex justify-between py-5">
-            <p className="text-3xl">Trending Now</p>
+            <p className="text-xl font-semibold">Trending Now</p>
             <Dropdown func={setCategory}  options={["all","tv","movie"]}  />
           </div>
           <HorizontalCards data={trending} category={category} />

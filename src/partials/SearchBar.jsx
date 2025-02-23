@@ -20,11 +20,11 @@ function SearchBar() {
   },[query])
 
   return (
-    <div className='h-[10vh] w-[90%] mx-auto flex gap-5 relative  p-5 items-center text-2xl'>
-        <IoSearch className='text-3xl'  />
-        <input  onChange={(e)=>setquery(e.target.value)} value={query} className=' px-5 outline-none border-[#dbd2d2]  border-[1px]  rounded-lg py-2 w-[72.5%]' type="text" placeholder='Search anything ...' />
+    <div className='h-[15vh] w-[90%] mx-auto flex gap-5 relative  p-5 items-center text-2xl'>
+        <IoSearch className='text-xl'  />
+        <input  onChange={(e)=>setquery(e.target.value)} value={query} className='capitalize px-5 text-sm outline-none border-[#dbd2d2]  border-[1px]  rounded-lg py-2 w-[72.5%]' type="text" placeholder='Search...' />
         {query.length >0 && (
-          <IoCloseSharp onClick={()=>setquery("")} className='text-3xl text-red-600 absolute right-[25%]' />
+          <IoCloseSharp onClick={()=>setquery("")} className='text-2xl text-red-600 absolute right-[25%]' />
         )}
            {/* <div className="search-results w-[78%] bg-zinc-300 h-[50vh] overflow-y-auto rounded-sm ml-[4.5%] top-[100%] absolute box-border">  */}
            <div className="searches w-[70%] z-10 rounded ml-[4.4%] overflow-auto absolute bg-white max-h-[50vh] top-[80%]">

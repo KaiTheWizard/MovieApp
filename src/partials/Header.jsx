@@ -15,7 +15,7 @@ function Header({ wallpaper }) {
       className=" w-[90%] relative h-[55vh] mx-auto"
     >
       <div className="wallpaper-info flex gap-2 p-6 flex-col absolute bottom-0">
-        <h2 className="capitalize font-semibold  text-4xl">
+        <h2 className="capitalize font-semibold  text-5xl">
           {wallpaper.name || wallpaper.title ||
             wallpaper.original_title ||
             wallpaper.original_name}
@@ -23,7 +23,7 @@ function Header({ wallpaper }) {
         <p>
           <span></span>
         </p>
-        <p className="text-justify w-[50%]">
+        <p className="text-sm leading-4 w-[70%]">
           {wallpaper.overview.slice(0, 200)}...
           <Link  to={`/${wallpaper.media_type || mediaType || category }/details/${wallpaper.id}`}>more</Link>
         </p>

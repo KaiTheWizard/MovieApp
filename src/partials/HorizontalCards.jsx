@@ -10,7 +10,7 @@ function HorizontalCards({ data ,category }) {
           return (
             <Link to={`${item.media_type}/details/${item.id}`}
               key={index}
-              className=" card h-[40vh] w-[18%] shrink-0 overflow-hidden rounded-sm bg-zinc-800"
+              className=" card h-[40vh] w-[20%] shrink-0 overflow-hidden rounded-sm bg-zinc-800"
             >
               <img
                 className="h-[55%] w-full object-cover"
